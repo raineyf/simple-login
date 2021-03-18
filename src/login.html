@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+            <a href="#main" class="skip-link">Skip to Main</a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <h1>Please Login Below</h1>
+            <form aria-labelledby="login-legend">
+                <fieldset>
+                   <legend id="login-legend">Login</legend>
+                    <div class="input-container">
+                   <label for="Username">Username</label>
+                   <input id="Username" name="Username" type="text" required aria-describedby="username-error">
+                   <p id="username-error" class="input-error">Please enter an existing username</p>
+                    </div>
+                    <div class="input-container">
+                   <label for="Password">Password</label>
+                   <input id="Password" name="Password" type="text" required aria-describedby="password-error">
+                   <p id="password-error" class="input-error">Password and username do not match</p>
+                    </div>
+                   <button type="submit">Login</button>
+                </fieldset>
+            </form>
+    </main>
+</body>
+</html>
