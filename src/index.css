@@ -88,6 +88,7 @@ legend {
     left: 0;
     margin: 0 auto;
     font-size: 18px;
+    text-align: center;
 }
 a:focus,
 input:focus,
