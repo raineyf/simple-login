@@ -6,10 +6,12 @@
     const passwordInput = document.querySelector("#password");
     const errorMessages = document.querySelectorAll(".input-error");
     const userError = document.querySelector("#username-error");
+    const userErrorMessage = userError.innerHTML;
     const passError = document.querySelector("#password-error");
     const clearErrorMessages = () => {
         errorMessages.forEach((m) => {
             m.classList.remove("active");
+            userError.innerHTML = userErrorMessage;
         });
     };
     const getFormData = () => {
@@ -81,6 +83,13 @@
                     .then((json) => {
                         if (json.signupStatus == "success") {
                             window.alert("Account Added!");
+                        } else if (
+                            json.signupStatus == "fail" &&
+                            json.message == "Username unavailable"
+                        ) {
+                            userError.innerHTML = json.message;
+                            userError.classList.add("active");
+                            usernameInput.focus();
                         }
                     });
             }

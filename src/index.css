@@ -62,7 +62,7 @@ fieldset {
     position: absolute;
     top: 35px;
     margin: 0;
-    color: crimson;
+    color: firebrick;
     display: none;
 }
 .input-container .input-error.active {

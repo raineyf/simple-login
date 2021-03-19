@@ -47,10 +47,23 @@ app.post("/login", (req, res) => {
 
 app.post("/signup", (req, res) => {
     const user = req.body;
-    users.push(user);
+    let userExists = false;
     let response = {
         signupStatus: "success",
     };
+    users.forEach((u) => {
+        if (u.username == user.username) {
+            response = {
+                signupStatus: "fail",
+                message: "Username unavailable",
+            };
+            userExists = true;
+            return;
+        }
+    });
+    if (userExists == false) {
+        users.push(user);
+    }
     res.send(JSON.stringify(response));
 });
 
