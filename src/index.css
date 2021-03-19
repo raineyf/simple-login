@@ -71,7 +71,7 @@ fieldset {
 fieldset button {
     width: 100%;
     background-color: lightgreen;
-    border: none;
+    border: 1px solid black;
     height: 44px;
     border-radius: 5px;
     font-size: 18px;

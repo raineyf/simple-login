@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Sign Up Page</title>
+<link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <header>
+            <a href="#main" class="skip-link">Skip to Main</a>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="/login.html">Login</a></li>
                 <li><a href="/signup.html">Sign Up</a></li>
             </ul>
         </nav>
     </header>
-    <main><h1>Sign Up Page</h1></main>
+    <main id="main">
+        <h1>Create Account Below</h1>
+            <form aria-labelledby="signup-legend" id="signup-form">
+                <fieldset>
+                   <legend id="signup-legend">Sign Up</legend>
+                    <div class="input-container">
+                   <label for="username">Username</label>
+                   <input id="username" name="username" type="text" required aria-describedby="username-error">
+                   <p id="username-error" class="input-error">Minimum username length: 5 characters</p>
+                    </div>
+                    <div class="input-container">
+                   <label for="password">Password</label>
+                   <input id="password" name="password" type="text" required aria-describedby="password-error">
+                   <p id="password-error" class="input-error">Password must have at least 1 lowercase letter, 1 uppercase letter and 1 number</p>
+                    </div>
+                   <button type="submit">Create Account</button>
+                </fieldset>
+            </form>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
